@@ -1,5 +1,8 @@
 pipeline {
     agent { docker { image 'maven:3.3.3' } }
+    tools {
+        maven 'M3'
+    }
     stages {
         stage('build') {
             steps {
@@ -14,5 +17,5 @@ pipeline {
             success {
                 echo 'This will run only if successful'
             }
-    }
+     }
 }
