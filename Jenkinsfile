@@ -1,12 +1,10 @@
 pipeline {
     agent { docker { image 'maven:3.3.3' } }
-    tools {
-        maven 'M3'
-    }
+
     stages {
         stage('build') {
             steps {
-                sh 'mvn test'
+                def mvn_version = 'M3' withEnv( ["PATH+MAVEN=${tool mvn_version}/bin"] ) { //sh "mvn test" }
             }
         }
     }
