@@ -5,18 +5,17 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
-public class Premier {
+public class Wole {
 	static WebDriver driver;
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
 		for(int c=0; c < 40; c++) {
-		
 			runT();
 			
 		}
-	} 
+	}
 	
 	@SuppressWarnings("deprecation")
 	public static void runT() {
